@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="">
+
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>angular 1.6 workshop</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="app/styles/main.css">
+</head>
+
+<body ng-app="app" ng-strict-di>
+    <section class="main-container">
+        <header-animals></header-animals>   
+        <!-- aquí se irán renderizando los componentes indicados en el router -->
+        <ui-view></ui-view>  
+         <footer-animals></footer-animals>      
+    </section>
+    
+    <!-- angular -->
+    <script src="vendor/angular.min.js"></script>
+    <script src="vendor/angular-ui-router.min.js"></script>
+    <script src="vendor/angular-animate.min.js"></script>
+
+    <!-- our app -->
+    <script src="app/app.js"></script>
+
+    <!-- servicios / factorías -->
+    <script src="app/services/animals-factory.js"></script>
+
+    <!-- componentes -->
+        <!-- pantalla main -->
+        <script src="app/components/main/view-main.js"></script>
+        <script src="app/components/main/animalsList/animals-list.js"></script>
+        <script src="app/components/main/animalsCard/animals-card.js"></script> 
+        
+        <!-- pantalla detail -->
+        <script src="app/components/detail/view-detail.js"></script>
+
+          <!-- pantalla add -->
+        <script src="app/components/add/view-add.js"></script>
+
+        <!-- comunes -->
+        <script src="app/components/commons/header/header.js"></script>
+        <script src="app/components/commons/footer/footer.js"></script>
+
+
+</body>
+
+
+</html>
